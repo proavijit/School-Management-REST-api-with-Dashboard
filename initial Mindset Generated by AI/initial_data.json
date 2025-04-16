@@ -1,0 +1,162 @@
+{
+  "students": [
+    {
+      "id": 1001,
+      "name": "Afsana Rahman",
+      "email": "afsana.rahman@example.com",
+      "phone": "+8801722223333",
+      "dob": "2006-09-15",
+      "gender": "female",
+      "address": {
+        "street": "15/3 Bashundhara",
+        "city": "Dhaka",
+        "district": "Dhaka",
+        "zipcode": "1229"
+      },
+      "parent": {
+        "name": "Rashid Rahman",
+        "phone": "+8801711112222",
+        "email": "rashid@example.com",
+        "relation": "Father"
+      },
+      "enrollment": {
+        "student_id": 1001,
+        "department_id": 3,
+        "batch": "2023",
+        "section": "A",
+        "roll": "23A01"
+      },
+      "courses": [
+        {
+          "course_id": 201,
+          "enrolled_date": "2024-01-10",
+          "status": "active"
+        }
+      ],
+      "attendance": [
+        {
+          "date": "2025-04-14",
+          "course_id": 201,
+          "status": "present"
+        }
+      ],
+      "submissions": [
+        {
+          "assignment_id": 302,
+          "submitted_on": "2025-04-10",
+          "grade": "A",
+          "feedback": "Well done"
+        }
+      ],
+      "notifications": [
+        {
+          "message": "Your assignment for Math has been graded.",
+          "type": "assignment",
+          "read": false,
+          "timestamp": "2025-04-11T08:30:00Z"
+        }
+      ],
+      "created_at": "2024-12-01T08:00:00Z",
+      "updated_at": "2025-04-01T12:00:00Z"
+    }
+  ],
+  "teachers": [
+    {
+      "id": 5001,
+      "name": "Nasima Akter",
+      "email": "nasima.akter@example.com",
+      "department_id": 3,
+      "designation": "Lecturer",
+      "hire_date": "2020-06-01",
+      "courses": [
+        201,
+        202
+      ],
+      "schedule": [
+        {
+          "course_id": 201,
+          "day": "Sunday",
+          "start_time": "10:00",
+          "end_time": "11:30",
+          "classroom": "B302"
+        }
+      ],
+      "notifications": [
+        {
+          "message": "New student enrolled in your course.",
+          "type": "enrollment",
+          "read": false,
+          "timestamp": "2025-04-12T10:30:00Z"
+        }
+      ],
+      "created_at": "2020-06-01T09:00:00Z",
+      "updated_at": "2025-03-22T14:00:00Z"
+    }
+  ],
+  "departments": [
+    {
+      "id": 3,
+      "name": "Science",
+      "head_id": 5001
+    }
+  ],
+  "courses": [
+    {
+      "id": 201,
+      "name": "Advanced Mathematics",
+      "code": "MATH-201",
+      "credit": 3,
+      "teacher_id": 5001,
+      "department_id": 3,
+      "classroom": "B302",
+      "assignments": [
+        {
+          "id": 302,
+          "title": "Integration Techniques",
+          "description": "Solve all questions from Chapter 5",
+          "due_date": "2025-04-10"
+        }
+      ],
+      "exams": [
+        {
+          "type": "midterm",
+          "date": "2025-03-01",
+          "max_marks": 50,
+          "grades": [
+            {
+              "student_id": 1001,
+              "marks": 43
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "name": "admin",
+      "permissions": [
+        "create_user",
+        "delete_user",
+        "assign_role"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "teacher",
+      "permissions": [
+        "add_assignment",
+        "grade_assignment"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "student",
+      "permissions": [
+        "submit_assignment",
+        "view_results"
+      ]
+    }
+  ]
+}

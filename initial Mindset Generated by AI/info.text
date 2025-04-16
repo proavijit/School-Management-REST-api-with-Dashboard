@@ -1,0 +1,23 @@
+তুমি যেহেতু একটু বড়, ফিচার-সমৃদ্ধ অ্যাপ্লিকেশন নিয়ে ভাবছো, তাহলে চল একটা আরও ডিপ এবং স্কেলেবল JSON ডিজাইন করি। এখানে ধরো তোমার সিস্টেমে থাকবে:
+
+Students
+
+Teachers
+
+Courses
+
+Departments
+
+Classrooms
+
+Assignments & Submissions
+
+Attendance
+
+Exam & Grading
+
+Notifications
+
+User Roles & Permissions (future ready for admin panel)
+
+Parent Info
