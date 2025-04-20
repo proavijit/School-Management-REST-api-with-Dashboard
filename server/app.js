@@ -1,43 +1,40 @@
 const express = require("express");
-const cors = require("cors")
-
+const mongoose = require("mongoose");
+const cors = require("cors");
+const userRouter = require("./routes/user.route");
+const connectDB = require('./config/db');
 
 const app = express();
+
+// Middleware
 app.use(cors());
-app.use(express.urlencoded({extended:true}));
-app.use(express.json())
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
+// Database Connection  
+connectDB();
 
+// Routes
+app.use("/api/users", userRouter);
 
+// Serve frontend (optional)
+app.get('/', (req, res) => {
+  res.send('<h1>🚀 Hello from MongoDB + Mongoose!</h1>');
+});
 
-
-// api/users: GET
-//api/users/:id : GET
-// api/users/ : POST
-// api/users/:id :PATCH
-// api/users/:id : DELETE
-
-
-
-
-
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + '/views/index.html')
-})
-
-
-// route not found
+// 404 Route Not Found Handler
 app.use((req, res, next) => {
   res.status(404).json({
-    message: 'route not found'
-  })
-})
+    message: "Route not found",
+  });
+});
 
-// server error handling 
+// Global Error Handler
 app.use((err, req, res, next) => {
-  res.status(5000).json({
-    message: 'Something Broken'
-  })
-})
+  console.error(err.stack);
+  res.status(500).json({
+    message: "Something went wrong!",
+  });
+});
 
 module.exports = app;
