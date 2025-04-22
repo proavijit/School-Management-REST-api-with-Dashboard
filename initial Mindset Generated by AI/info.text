@@ -1,23 +1,66 @@
 তুমি যেহেতু একটু বড়, ফিচার-সমৃদ্ধ অ্যাপ্লিকেশন নিয়ে ভাবছো, তাহলে চল একটা আরও ডিপ এবং স্কেলেবল JSON ডিজাইন করি। এখানে ধরো তোমার সিস্টেমে থাকবে:
 
 Students
-
 Teachers
-
 Courses
-
 Departments
-
 Classrooms
-
 Assignments & Submissions
-
 Attendance
-
 Exam & Grading
-
 Notifications
-
 User Roles & Permissions (future ready for admin panel)
-
 Parent Info
+
+----------------------------------------------------------------------------------------------
+
+school-management-api/
+├── controllers/
+│   ├── studentController.js
+│   ├── teacherController.js
+│   ├── courseController.js
+│   ├── departmentController.js
+│   ├── classroomController.js
+│   ├── assignmentController.js
+│   ├── attendanceController.js
+│   ├── examController.js
+│   ├── notificationController.js
+│   ├── parentController.js
+│   └── authController.js
+│
+├── models/
+│   ├── Student.js
+│   ├── Teacher.js
+│   ├── Course.js
+│   ├── Department.js
+│   ├── Classroom.js
+│   ├── Assignment.js
+│   ├── Submission.js
+│   ├── Attendance.js
+│   ├── Exam.js
+│   ├── Grade.js
+│   ├── Notification.js
+│   ├── Parent.js
+│   └── User.js
+│
+├── routes/
+│   ├── studentRoutes.js
+│   ├── teacherRoutes.js
+│   ├── courseRoutes.js
+│   ├── departmentRoutes.js
+│   ├── classroomRoutes.js
+│   ├── assignmentRoutes.js
+│   ├── attendanceRoutes.js
+│   ├── examRoutes.js
+│   ├── notificationRoutes.js
+│   ├── parentRoutes.js
+│   └── authRoutes.js
+│
+├── middleware/
+│   └── authMiddleware.js
+│
+├── config/
+│   └── db.js
+│
+├── app.js
+└── server.js

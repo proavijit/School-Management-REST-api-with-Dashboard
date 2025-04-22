@@ -1,14 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <title>School Management API Documentation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f4f4f4;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    .section {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-left: 5px solid #3498db;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 6px 0;
+    }
+    code {
+      background: #eee;
+      padding: 3px 6px;
+      border-radius: 3px;
+    }
+  </style>
 </head>
-
 <body>
-  <h1> Your Server is Running! </h1>
-</body>
+  <h1>📘 School Management API Documentation</h1>
 
+  <div class="section">
+    <h2>👨‍🎓 Students</h2>
+    <ul>
+      <li><code>POST /api/students</code> – Create a student</li>
+      <li><code>GET /api/students</code> – Get all students</li>
+      <li><code>GET /api/students/:id</code> – Get student by ID</li>
+      <li><code>PUT /api/students/:id</code> – Update student</li>
+      <li><code>DELETE /api/students/:id</code> – Delete student</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>👨‍🏫 Teachers</h2>
+    <ul>
+      <li><code>POST /api/teachers</code> – Create a teacher</li>
+      <li><code>GET /api/teachers</code> – Get all teachers</li>
+      <li><code>GET /api/teachers/:id</code> – Get teacher by ID</li>
+      <li><code>PUT /api/teachers/:id</code> – Update teacher</li>
+      <li><code>DELETE /api/teachers/:id</code> – Delete teacher</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📚 Courses</h2>
+    <ul>
+      <li><code>POST /api/courses</code> – Create a course</li>
+      <li><code>GET /api/courses</code> – Get all courses</li>
+      <li><code>GET /api/courses/:id</code> – Get course by ID</li>
+      <li><code>PUT /api/courses/:id</code> – Update course</li>
+      <li><code>DELETE /api/courses/:id</code> – Delete course</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📝 Assignments</h2>
+    <ul>
+      <li><code>POST /api/assignments</code> – Create an assignment</li>
+      <li><code>GET /api/assignments</code> – Get all assignments</li>
+      <li><code>GET /api/assignments/:id</code> – Get assignment by ID</li>
+      <li><code>PUT /api/assignments/:id</code> – Update assignment</li>
+      <li><code>DELETE /api/assignments/:id</code> – Delete assignment</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📅 Attendance</h2>
+    <ul>
+      <li><code>POST /api/attendance</code> – Mark attendance</li>
+      <li><code>GET /api/attendance</code> – Get all attendance</li>
+      <li><code>GET /api/attendance/:id</code> – Get attendance by ID</li>
+      <li><code>PUT /api/attendance/:id</code> – Update attendance</li>
+      <li><code>DELETE /api/attendance/:id</code> – Delete attendance</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🧪 Exams</h2>
+    <ul>
+      <li><code>POST /api/exams</code> – Create an exam</li>
+      <li><code>GET /api/exams</code> – Get all exams</li>
+      <li><code>GET /api/exams/:id</code> – Get exam by ID</li>
+      <li><code>PUT /api/exams/:id</code> – Update exam</li>
+      <li><code>DELETE /api/exams/:id</code> – Delete exam</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📊 Grades</h2>
+    <ul>
+      <li><code>POST /api/grades</code> – Add grade</li>
+      <li><code>GET /api/grades</code> – Get all grades</li>
+      <li><code>GET /api/grades/:id</code> – Get grade by ID</li>
+      <li><code>PUT /api/grades/:id</code> – Update grade</li>
+      <li><code>DELETE /api/grades/:id</code> – Delete grade</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🏛️ Departments</h2>
+    <ul>
+      <li><code>POST /api/departments</code> – Create department</li>
+      <li><code>GET /api/departments</code> – Get all departments</li>
+      <li><code>GET /api/departments/:id</code> – Get department by ID</li>
+      <li><code>PUT /api/departments/:id</code> – Update department</li>
+      <li><code>DELETE /api/departments/:id</code> – Delete department</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🔔 Notifications</h2>
+    <ul>
+      <li><code>POST /api/notifications</code> – Create notification</li>
+      <li><code>GET /api/notifications</code> – Get all notifications</li>
+      <li><code>GET /api/notifications/:id</code> – Get notification by ID</li>
+      <li><code>PUT /api/notifications/:id</code> – Update notification</li>
+      <li><code>DELETE /api/notifications/:id</code> – Delete notification</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>👨‍👩‍👧 Parents</h2>
+    <ul>
+      <li><code>POST /api/parents</code> – Create parent</li>
+      <li><code>GET /api/parents</code> – Get all parents</li>
+      <li><code>GET /api/parents/:id</code> – Get parent by ID</li>
+      <li><code>PUT /api/parents/:id</code> – Update parent</li>
+      <li><code>DELETE /api/parents/:id</code> – Delete parent</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🔐 Auth</h2>
+    <ul>
+      <li><code>POST /api/auth/register</code> – Register user</li>
+      <li><code>POST /api/auth/login</code> – Login</li>
+      <li><code>GET /api/auth/me</code> – Get current user</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🏫 Classrooms</h2>
+    <ul>
+      <li><code>POST /api/classrooms</code> – Create classroom</li>
+      <li><code>GET /api/classrooms</code> – Get all classrooms</li>
+      <li><code>GET /api/classrooms/:id</code> – Get classroom by ID</li>
+      <li><code>PUT /api/classrooms/:id</code> – Update classroom</li>
+      <li><code>DELETE /api/classrooms/:id</code> – Delete classroom</li>
+    </ul>
+  </div>
+
+</body>
 </html>

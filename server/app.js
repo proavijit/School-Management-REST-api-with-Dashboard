@@ -1,10 +1,23 @@
 const express = require("express");
 const mongoose = require("mongoose");
+require('dotenv').config();
 const cors = require("cors");
 const userRouter = require("./routes/user.route");
 const connectDB = require('./config/db');
-
 const app = express();
+
+
+const studentRoutes = require('./routes/studentRoutes');
+const teacherRoutes = require('./routes/teacherRoutes');
+const courseRoutes = require('./routes/courseRoutes');
+const departmentRoutes = require('./routes/departmentRoutes');
+const classroomRoutes = require('./routes/classroomRoutes');
+const assignmentRoutes = require('./routes/assignmentRoutes');
+const attendanceRoutes = require('./routes/attendanceRoutes');
+const examRoutes = require('./routes/examRoutes');
+const notificationRoutes = require('./routes/notificationRoutes');
+const parentRoutes = require('./routes/parentRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 // Middleware
 app.use(cors());
@@ -14,8 +27,21 @@ app.use(express.json());
 // Database Connection  
 connectDB();
 
-// Routes
+// Test Routes
 app.use("/api/users", userRouter);
+
+// All Routes
+app.use('/api/students', studentRoutes);
+app.use('/api/teachers', teacherRoutes);
+app.use('/api/courses', courseRoutes);
+app.use('/api/departments', departmentRoutes);
+app.use('/api/classrooms', classroomRoutes);
+app.use('/api/assignments', assignmentRoutes);
+app.use('/api/attendance', attendanceRoutes);
+app.use('/api/exams', examRoutes);
+app.use('/api/notifications', notificationRoutes);
+app.use('/api/parents', parentRoutes);
+app.use('/api/auth', authRoutes);
 
 // Serve frontend (optional)
 app.get('/', (req, res) => {

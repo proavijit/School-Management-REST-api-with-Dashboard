@@ -27,7 +27,6 @@ const createUser = async (req, res) => {
   try {
     const { name, age } = req.body;
 
-    // ✅ Auto generate ID using uuid
     const newUser = new User({
       id: uuidv4(),
       name,
