@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const departmentController = require('../controllers/departmentController');
-const authMiddleware = require('../middlewares/authMiddleware'); // if authentication is required
+const authMiddleware = require('../middlewares/authMiddleware');
 
 router.post('/', authMiddleware, departmentController.createDepartment);
 router.get('/', departmentController.getAllDepartments);

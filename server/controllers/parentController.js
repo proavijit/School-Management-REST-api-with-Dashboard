@@ -1,5 +1,5 @@
 const Parent = require('../models/Parent');
-const User = require('../models/User');  // Assuming a User model exists
+const User = require('../models/User'); 
 
 // Create a new parent record
 exports.createParent = async (req, res) => {
@@ -30,7 +30,7 @@ exports.createParent = async (req, res) => {
 exports.getParents = async (req, res) => {
   try {
     const parents = await Parent.find()
-      .populate('students', 'name email');  // Populate student details
+      .populate('students', 'name email'); 
 
     res.status(200).json(parents);
   } catch (err) {
@@ -44,7 +44,7 @@ exports.getParentById = async (req, res) => {
     const { parentId } = req.params;
     
     const parent = await Parent.findById(parentId)
-      .populate('students', 'name email');  // Populate student details
+      .populate('students', 'name email'); 
 
     if (!parent) return res.status(404).json({ message: 'Parent not found' });
     

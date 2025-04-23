@@ -1,5 +1,5 @@
 const User = require('../models/user.model');
-const { v4: uuidv4 } = require('uuid'); // 👈 import uuid
+const { v4: uuidv4 } = require('uuid'); 
 
 // Get all users
 const getAllUsers = async (req, res) => {

@@ -1,5 +1,5 @@
 const Notification = require('../models/Notification');
-const User = require('../models/User'); // Assuming you have a User model
+const User = require('../models/User'); 
 
 // Create Notification
 exports.createNotification = async (req, res) => {
@@ -61,7 +61,7 @@ exports.deleteNotification = async (req, res) => {
     const deletedNotification = await Notification.findByIdAndDelete(notificationId);
     if (!deletedNotification) return res.status(404).json({ message: 'Notification not found' });
 
-    res.status(204).send(); // No content, just success
+    res.status(204).send();  
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

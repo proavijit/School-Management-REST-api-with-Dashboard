@@ -29,8 +29,8 @@ exports.createClassroom = async (req, res) => {
 exports.getClassrooms = async (req, res) => {
   try {
     const classrooms = await Classroom.find()
-      .populate('teacherId', 'name email')  // Populate teacher details
-      .populate('students', 'name email');  // Populate student details
+      .populate('teacherId', 'name email')  
+      .populate('students', 'name email');  
 
     res.status(200).json(classrooms);
   } catch (err) {
@@ -44,8 +44,8 @@ exports.getClassroomById = async (req, res) => {
     const { classroomId } = req.params;
     
     const classroom = await Classroom.findById(classroomId)
-      .populate('teacherId', 'name email')  // Populate teacher details
-      .populate('students', 'name email');  // Populate student details
+      .populate('teacherId', 'name email')  
+      .populate('students', 'name email');  
 
     if (!classroom) return res.status(404).json({ message: 'Classroom not found' });
     
@@ -84,7 +84,7 @@ exports.deleteClassroom = async (req, res) => {
     const classroom = await Classroom.findByIdAndDelete(classroomId);
     if (!classroom) return res.status(404).json({ message: 'Classroom not found' });
 
-    res.status(204).send();  // No content, successful deletion
+    res.status(204).send();   
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

@@ -1,5 +1,5 @@
 const Exam = require('../models/Exam');
-const Teacher = require('../models/Teacher'); // Assuming you have a Teacher model
+const Teacher = require('../models/Teacher'); 
 
 // Create Exam
 exports.createExam = async (req, res) => {

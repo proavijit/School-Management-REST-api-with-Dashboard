@@ -5,7 +5,7 @@ const gradeSchema = new mongoose.Schema({
   examId: { type: mongoose.Schema.Types.ObjectId, ref: 'Exam', required: true },
   marksObtained: { type: Number, required: true },
   totalMarks: { type: Number, required: true },
-  grade: { type: String, required: true }, // A, B, C, D, etc.
+  grade: { type: String, required: true }, 
   createdAt: { type: Date, default: Date.now }
 });
 

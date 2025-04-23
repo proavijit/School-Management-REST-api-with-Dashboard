@@ -7,10 +7,8 @@ const teacherSchema = new mongoose.Schema({
   phone: { type: String, required: true },
   address: { type: String },
   profileImage: { type: String },
-  isActive: { type: Boolean, default: true }, // To check if the teacher is active or not
+  isActive: { type: Boolean, default: true }, 
 }, { timestamps: true });
 
-// You can add methods to the teacher schema if needed
-// teacherSchema.methods.someMethod = function() { ... };
 
 module.exports = mongoose.model('Teacher', teacherSchema);

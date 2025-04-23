@@ -3,10 +3,10 @@ const router = express.Router();
 const classroomController = require('../controllers/classroomController');
 
 // Routes for classrooms
-router.post('/', classroomController.createClassroom);  // Create a new classroom
-router.get('/', classroomController.getClassrooms);  // Get all classrooms
-router.get('/:classroomId', classroomController.getClassroomById);  // Get classroom by ID
-router.put('/:classroomId', classroomController.updateClassroom);  // Update classroom details
-router.delete('/:classroomId', classroomController.deleteClassroom);  // Delete a classroom
+router.post('/', classroomController.createClassroom);
+router.get('/', classroomController.getClassrooms);
+router.get('/:classroomId', classroomController.getClassroomById);
+router.put('/:classroomId', classroomController.updateClassroom);
+router.delete('/:classroomId', classroomController.deleteClassroom);
 
 module.exports = router;

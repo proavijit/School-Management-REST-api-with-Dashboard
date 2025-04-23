@@ -1,6 +1,6 @@
 const Assignment = require('../models/Assignment');
 const Submission = require('../models/Submission');
-const Student = require('../models/Student'); // Assuming you have a Student model
+const Student = require('../models/Student');
 
 // Create Assignment
 exports.createAssignment = async (req, res) => {

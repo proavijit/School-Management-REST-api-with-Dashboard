@@ -1,12 +1,12 @@
 const express = require("express");
+const app = express();
 const mongoose = require("mongoose");
 require('dotenv').config();
 const cors = require("cors");
-const userRouter = require("./routes/user.route");
 const connectDB = require('./config/db');
-const app = express();
 
 
+const userRouter = require("./routes/user.route");
 const studentRoutes = require('./routes/studentRoutes');
 const teacherRoutes = require('./routes/teacherRoutes');
 const courseRoutes = require('./routes/courseRoutes');
@@ -43,9 +43,9 @@ app.use('/api/notifications', notificationRoutes);
 app.use('/api/parents', parentRoutes);
 app.use('/api/auth', authRoutes);
 
-// Serve frontend (optional)
+// Show Browser root some message 
 app.get('/', (req, res) => {
-  res.send('<h1>🚀 Hello from MongoDB + Mongoose!</h1>');
+  res.send('<h1> Hello from MongoDB + Mongoose </h1>');
 });
 
 // 404 Route Not Found Handler

@@ -3,11 +3,11 @@ const router = express.Router();
 const attendanceController = require('../controllers/attendanceController');
 
 // Routes for Attendance
-router.post('/', attendanceController.createAttendance);         // Create Attendance Record
-router.get('/', attendanceController.getAttendances);            // Get All Attendance Records
-router.get('/student/:studentId', attendanceController.getAttendanceByStudent);  // Get Attendance for Specific Student
-router.get('/date/:classDate', attendanceController.getAttendanceByDate);       // Get Attendance for Specific Class (Date)
-router.put('/:attendanceId', attendanceController.updateAttendanceStatus);  // Update Attendance Status
-router.delete('/:attendanceId', attendanceController.deleteAttendance); // Delete Attendance Record
+router.post('/', attendanceController.createAttendance);
+router.get('/', attendanceController.getAttendances);
+router.get('/student/:studentId', attendanceController.getAttendanceByStudent);
+router.get('/date/:classDate', attendanceController.getAttendanceByDate);
+router.put('/:attendanceId', attendanceController.updateAttendanceStatus);
+router.delete('/:attendanceId', attendanceController.deleteAttendance);
 
 module.exports = router;
